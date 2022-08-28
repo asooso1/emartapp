@@ -15,7 +15,7 @@
       </div>
       <p class="reactions">
         <span class="like"><font-awesome-icon icon="fa-regular fa-heart"/> {{ product.likeCount }}</span>
-        <span class="comment"><font-awesome-icon icon="fa-regular fa-comment" />{{ product.commentCount }}</span>
+        <span class="comment"><font-awesome-icon icon="fa-regular fa-comment" /> {{ product.commentCount }}</span>
       </p>
     </div>
   </div>
@@ -28,66 +28,111 @@ export default {
     product: Object,
   },
   methods: {
-
   },
   
 }
 </script>
 
 <style scoped>
-@media screen and (max-width: 2000px){
-  img {
-    display: block;
-  }
-  .product-item{
-    display: flex;
-    padding: 0px 20px;
-    width: 100%;
-  }
-  .product-item .box_left{
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
-    background: orange;
-    text-align: center;
-  }
-  .product-item .box_left img {
-    width: 120px;
-    height: 120px;
-  }
-  .product-item .box_right{
-    position: relative;
-    left: 20px;
-    width: 100%;
-    text-align: start;
-  }
-  .product-item .box_right .price{
-    
-  }
-  .product-item .box_right .price .origin-price{
-    text-decoration: line-through;
-    color: #777;
-  }
-  .product-item .box_right .price .discounted-price{
-    color: #222;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  .product-item .box_right .promotion {
-    
-  }
-  .product-item .box_right .promotion .promotion-red{
-    color: red;
-    border: 1px solid red;
-    border-radius: 5px;
-    padding: 2px;
-  }
-  .product-item .box_right .promotion .promotion-blue{
-    color: blue;
-    border: 1px solid blue;
-    border-radius: 10px;
-    padding: 2px;
-  }
+img {
+  display: block;
+}
+.product-item{
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.product-item .box_left{
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  /* background: orange; */
+  text-align: center;
+}
+.product-item .box_left img {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+}
+.product-item .box_right{
+  width: 100%;
+  margin-left: 20px;
+  text-align: start;
+}
+.product-item .box_right .price{
+  margin-bottom: 10px;
+}
+.product-item .box_right .price .origin-price{
+  text-decoration: line-through;
+  color: #777;
+}
+.product-item .box_right .price .discounted-price{
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+}
+.product-item .box_right .product-name{
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.product-item .box_right .promotion {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+.product-item .box_right .promotion .promotion-red{
+  color: #DB392E;
+  border: 1px solid #DB392E;
+  border-radius: 5px;
+  padding: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.product-item .box_right .promotion .promotion-blue{
+  color: #4774CF;
+  border: 1px solid #4774CF;
+  border-radius: 10px;
+  padding: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.product-item .box_right .reactions{
+  font-size: 14px;
+  display: flex;
+  gap: 30px;
+  color: #777;
+}
+.product-item .box_right .reactions .like{
   
+}
+.product-item .box_right .reactions .comment{
+  
+}
+/* PC */
+@media screen and (min-width: 1440px){
+  .product-item{
+    flex-basis: 33.3%;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 1440px){
+  .product-item{
+    flex-basis: 50%;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 768px){
+  .product-item {
+    flex-basis: 100%;
+  }
 }
 </style>

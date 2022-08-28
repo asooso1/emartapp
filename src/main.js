@@ -4,10 +4,11 @@ import router from './router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faArrowLeft, faHouse, faBars, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faComment, faHeart  } from '@fortawesome/free-regular-svg-icons'
 
 
-library.add(faComment, faHeart)
+library.add(faComment, faHeart, faArrowLeft, faHouse, faBars, faArrowUp)
 Vue.config.productionTip = false
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 new Vue({
