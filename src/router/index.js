@@ -1,13 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import ProductList from '../views/ProductList.vue'
+import NavBar from '../components/NavBar.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/list',
-    name: 'ProductList',
-    component: () => import('../views/ProductList.vue')
+    path: '/product-list',
+    name: 'product-list',
+    components: {
+      default: ProductList,
+      header: NavBar,
+      // footer: NavBar,
+    },
+  },
+  {
+    path: '/test',
+    name: 'navbar',
+    components: {
+      NavBar
+    }
   }
 ]
 
