@@ -1,21 +1,24 @@
 <template>
   <div class="product-item">
     <a href="javascript:void(0)" class="box_left">
-      <img :src="product.productImg" alt="상품 이미지" />
+      <img :src="product.image" alt="상품 이미지" />
     </a>
     <div class="box_right">
-      <p class="price">
-        <span class="origin-price">{{ product.price }}</span>
-        <span class="discounted-price">{{ product.price }}원</span>
+      <p class="price" v-if="product.discountedPrice">
+        <span class="origin-price">{{ product.originPrice }}</span>
+        <span class="discounted-price" v-if="product.discountedPrice">{{ product.discountedPrice }}원</span>
       </p>
-      <p class="product-name">{{ product.productName }}</p>
-      <div class="promotion">
-        <span class="promotion-red">{{ product.promotionList[0].promotionCondition }} {{ product.promotionList[0].promotionValue }}원 할인</span>
-        <span class="promotion-blue">{{ product.promotionList[1].promotionCondition}}</span>
+      <p class="price" v-else>
+        <span class="discounted-price">{{ product.originPrice }}원</span>
+      </p>
+      <p class="product-name">{{ product.name }}</p>
+      <div class="event">
+        <span v-if="product.discount" class="promotion-red">{{ product.discount.condition }} {{ product.discount.value }} 할인</span>
+        <span v-if="product.promotion" class="promotion-blue">{{ product.promotion.value }}</span>
       </div>
       <p class="reactions">
-        <span class="like"><font-awesome-icon icon="fa-regular fa-heart"/> {{ product.likeCount }}</span>
-        <span class="comment"><font-awesome-icon icon="fa-regular fa-comment" /> {{ product.commentCount }}</span>
+        <span v-if="product.likeCount > 0" class="like"><font-awesome-icon icon="fa-regular fa-heart"/> {{ product.likeCount }}</span>
+        <span v-if="product.commentCount > 0" class="comment"><font-awesome-icon icon="fa-regular fa-comment" /> {{ product.commentCount }}</span>
       </p>
     </div>
   </div>
@@ -29,7 +32,6 @@ export default {
   },
   methods: {
   },
-  
 }
 </script>
 
@@ -50,13 +52,11 @@ img {
   width: 120px;
   height: 120px;
   border-radius: 15px;
-  /* background: orange; */
   text-align: center;
 }
 .product-item .box_left img {
   width: 120px;
   height: 120px;
-  padding: 10px;
 }
 .product-item .box_right{
   width: 100%;
@@ -69,6 +69,7 @@ img {
 .product-item .box_right .price .origin-price{
   text-decoration: line-through;
   color: #777;
+  margin-right: 5px;
 }
 .product-item .box_right .price .discounted-price{
   color: #222;
@@ -79,31 +80,32 @@ img {
   margin-bottom: 10px;
   font-weight: 800;
 }
-.product-item .box_right .promotion {
+.product-item .box_right .event {
   margin-bottom: 10px;
   font-size: 12px;
   font-weight: 600;
-
 }
-.product-item .box_right .promotion .promotion-red{
+.product-item .box_right .event .promotion-red{
   color: #DB392E;
   border: 1px solid #DB392E;
   border-radius: 5px;
-  padding: 2px;
+  padding: 3px;
+  max-width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 100%;
+  margin-right: 5px;
 }
-.product-item .box_right .promotion .promotion-blue{
+.product-item .box_right .event .promotion-blue{
   color: #4774CF;
   border: 1px solid #4774CF;
-  border-radius: 10px;
-  padding: 2px;
+  border-radius: 5px;
+  padding: 3px;
+  max-width: 100%;
+  margin-right: 5px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 100%;
 }
 .product-item .box_right .reactions{
   font-size: 14px;

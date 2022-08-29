@@ -1,0 +1,260 @@
+{
+  "list": [
+    {
+      "category": "여름과일",
+      "name": "대부도/송산 캠벨포도",
+      "price": "19900",
+      "image": "./images/grape.jpg",
+      "discount": {
+        "value": "5000",
+        "condition": "신세계포인트 적립 시"
+      },
+      "likeCount": "161",
+      "commentCount": "41"
+    },
+    {
+      "category": "여름과일",
+      "name": "항공직송 블랙 사파이어 포도",
+      "price": "15980",
+      "image": "./images/blackgrape.jpg",
+      "discount": {
+        "value": "3000",
+        "condition": "신세계포인트 적립 시"
+      },
+      "likeCount": "65",
+      "commentCount": "0"
+    },
+    {
+      "category": "여름과일",
+      "name": "샤인머스캣",
+      "price": "29900",
+      "image": "./images/shine.jpeg",
+      "discount": {
+        "value": "10000",
+        "condition": "신세계포인트 적립 시"
+      },
+      "likeCount": "99",
+      "commentCount": "761"
+    },
+    {
+      "category": "여름과일",
+      "name": "미국산 체리",
+      "price": "19900",
+      "image": "./images/cherry.jpg",
+      "discount": {
+        "value": "5000",
+        "condition": "신세계포인트 적립 시"
+      },
+      "likeCount": "58",
+      "commentCount": "745"
+    },
+    {
+      "category": "여름과일",
+      "name": "복숭아",
+      "price": "13900",
+      "image": "./images/peach.jpg",
+      "discount": {
+        "value": "6000",
+        "condition": "신세계포인트 적립 시"
+      },
+      "likeCount": "99",
+      "commentCount": "761"
+    },
+    {
+      "category": "대한민국수산대전",
+      "name": "광어 세꼬시회",
+      "price": "14980",
+      "image": "./images/ss1.png",
+      "discount": {
+        "value": "25",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "해양수산부 행사상품"
+      },
+      "likeCount": "352",
+      "commentCount": "462"
+    },
+    {
+      "category": "대한민국수산대전",
+      "name": "영광 참굴비",
+      "price": "19900",
+      "image": "./images/ss2.png",
+      "discount": {
+        "value": "50",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "해양수산부 행사상품"
+      },
+      "likeCount": "123",
+      "commentCount": "1787"
+    },
+    {
+      "category": "대한민국수산대전",
+      "name": "영광 참굴비",
+      "price": "24900",
+      "image": "./images/ss2.png",
+      "discount": {
+        "value": "50",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "해양수산부 행사상품"
+      },
+      "likeCount": "113",
+      "commentCount": "106"
+    },
+    {
+      "category": "대한민국수산대전",
+      "name": "손질 제주 은갈치",
+      "price": "39980",
+      "image": "./images/ss3.png",
+      "discount": {
+        "value": "20",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "해양수산부 행사상품"
+      },
+      "likeCount": "89",
+      "commentCount": "0"
+    },
+    {
+      "category": "대한민국수산대전",
+      "name": "손질 바지락",
+      "price": "10980",
+      "image": "./images/ss4.png",
+      "discount": {
+        "value": "30",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "해양수산부 행사상품"
+      },
+      "likeCount": "187",
+      "commentCount": "2083"
+    },
+    {
+      "category": "대한민국수산대전",
+      "name": "국산 생새우",
+      "price": "3000",
+      "image": "./images/ss5.png",
+      "discount": {
+        "value": "20",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "해양수산부 행사상품"
+      },
+      "likeCount": "186",
+      "commentCount": "1023"
+    },
+    {
+      "category": "추석 선물",
+      "name": "국내산 홍삼",
+      "price": "120000",
+      "image": "./images/hongsam.png",
+      "discount": {
+        "value": "20",
+        "condition": "신세계포인트 적립 시"
+      }
+    },
+    {
+      "category": "추석 선물",
+      "name": "참치 통조림 세트",
+      "price": "53600",
+      "image": "./images/tuna.jpg"
+    },
+    {
+      "category": "추석 선물",
+      "name": "햄 통조림 세트",
+      "price": "53600",
+      "image": "./images/spam.jpg",
+      "discount": {
+        "value": "20",
+        "condition": "행사카드 결제 시"
+      }
+    },
+    {
+      "category": "추석 선물",
+      "name": "영양제 세트",
+      "price": "80000",
+      "image": "./images/spam.jpg",
+      "discount": {
+        "value": "15",
+        "condition": "신세계포인트 적립 시"
+      }
+    },
+    {
+      "category": "추석 선물",
+      "name": "과일 세트",
+      "price": "36500",
+      "image": "./images/fruitset.png",
+      "promotion": {
+        "value": "당일 배송"
+      }
+    },
+    {
+      "category": "추석 선물",
+      "name": "복분자주",
+      "price": "43500",
+      "image": "./images/bokbunja.jpg",
+      "promotion": {
+        "value": "당일 배송"
+      }
+    },
+    {
+      "category": "신선 식품",
+      "name": "로메인상추",
+      "price": "4980",
+      "image": "./images/Romaine.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      }
+    },
+    {
+      "category": "신선 식품",
+      "name": "오이",
+      "price": "3600",
+      "image": "./images/cucumber.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      }
+    },
+    {
+      "category": "신선 식품",
+      "name": "두부",
+      "price": "2000",
+      "image": "./images/tofu.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      }
+    },
+    {
+      "category": "신선 식품",
+      "name": "당근",
+      "price": "3500",
+      "image": "./images/carrot.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      }
+    }
+  ]
+}
