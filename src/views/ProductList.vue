@@ -1,7 +1,7 @@
 <template>
   <div class="product-list">
     <SubmenuTabVue 
-      :category="selectedCategory"
+      :selectedCategory="selectedCategory"
       :categories="categories"
       @changeCategory="changeCategory"
     />
@@ -21,7 +21,8 @@ import ProductItemVue from '@/components/ProductItem.vue';
 import SubmenuTabVue from '@/components/SubmenuTab.vue';
 import _ from 'lodash';
 import axios from 'axios';
-
+let lastScroll = document.documentElement.scrollTop || 0;
+// let scrollUpState = false;
 export default {
   name: 'ProductList',
   components: {
@@ -35,12 +36,10 @@ export default {
       selectedList: [],
       categories: [],
       selectedCategory: 'all',
+      test: false,
     }
   },
   methods: {
-    test(){
-    
-    },
     // json 데이터 호출 메서드
     getAllList(){
       axios({
@@ -93,28 +92,39 @@ export default {
       })
       this.selectedList = list;
     },
-    getSelectedList(category) {
-      console.log(category);
-    },
+    // emit이벤트가 발생했을 때 카테고리 변경
     changeCategory(val){
       if (val=='all'){
         this.selectedCategory = 'all';
         this.selectedList = this.allList;
       }
       else{
-        this.selectedCategory = this.categories[val]
+        // props 데이터 양식에 맞춰 String으로 파싱
+        this.selectedCategory = String(val)
         this.selectedList = this.allList.filter((item) => {
           return item.category == this.categories[val]
         })
       }
-      // console.log(this.selectedCategory, val)
     }
   },
   created(){
     window.addEventListener('scroll', _.throttle(() => {
+      let currentScrollTop = document.documentElement.scrollTop;
+      const header = document.querySelector('.head');
+      const swiper = document.querySelector('.my-swiper');
+      if (lastScroll < currentScrollTop){
+        header.classList.remove('hide');
+        swiper.classList.remove('hide');
+      }
+      else {
+        header.classList.add('hide');
+        swiper.classList.add('hide');
+      }
+      lastScroll = document.documentElement.scrollTop;
       if(window.scrollY+window.innerHeight >= document.documentElement.offsetHeight){
         this.pageNumber+= 1;
       }
+      
     }),500)
     this.getAllList()
   },
