@@ -7,10 +7,9 @@
 ## 💁프로젝트 소개
 
 - 개발기간 : 2022.08.25 ~ 2022.08.30 
-
 - [emart X SSAFY] Front-end Engineer 1차 면접전형 사전과제 입니다.
-
 - emart App 내 금주의 전단광고 화면을 출력하는 SPA 앱 입니다.
+- 프로젝트 링크 : https://aesthetic-gnome-9b292f.netlify.app/
 
 ## 🛠 사용한 기술 스택
 

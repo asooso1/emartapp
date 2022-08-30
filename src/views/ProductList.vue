@@ -6,7 +6,7 @@
       @changeCategory="changeCategory"
     />
     <ProductItemVue 
-      v-for="(item, idx) in selectedList.slice(0, pageNumber*20)"
+      v-for="(item, idx) in selectedList.slice(0, pageNumber*10*column)"
       :key="idx"
       :product="item"
     />
@@ -31,8 +31,12 @@ export default {
   },
   data() {
     return {
+      // viewport width 확인을 위한 변수
+      clientWidth : window.innerWidth,
       // 인피니티 스크롤 페이지네이션을 위한 변수
       pageNumber: 1,
+      // viewport 변경 시 추가 데이터 요청을 위한 변수
+      column: 1,
       // api 요청 후 받은 data
       allList: [],
       // 선택된 카테고리 리스트 data
@@ -108,6 +112,22 @@ export default {
           return item.category == this.categories[val]
         })
       }
+    },
+    getColumn(){
+      if(this.clientWidth <= 768){
+        this.column = 1
+      }
+      else if(this.clientWidth <= 1440){
+        this.column = 2
+      }
+      else {
+        this.column = 3
+      }
+    }
+  },
+  watch: {
+    clientWidth() {
+      this.getColumn()
     }
   },
   created(){
@@ -133,7 +153,11 @@ export default {
       }
       
     }),500)
+    window.addEventListener('resize', _.throttle(() => {
+      this.clientWidth = window.innerWidth;
+    }))
     this.getAllList()
+    this.getColumn()
   },
 }
 </script>
