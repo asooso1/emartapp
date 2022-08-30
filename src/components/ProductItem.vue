@@ -81,9 +81,12 @@ img {
   font-weight: 800;
 }
 .product-item .box_right .event {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
   font-size: 12px;
   font-weight: 600;
+  max-width: 100%;
 }
 .product-item .box_right .event .promotion-red{
   color: #DB392E;

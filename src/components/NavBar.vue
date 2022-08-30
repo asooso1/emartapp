@@ -19,11 +19,26 @@
 </template>
 
 <script>
+import _ from 'lodash';
+let lastScroll = document.documentElement.scrollTop || 0
 export default {
   methods: {
     toTop() {
       window.scrollTo({ top:0, behavior:"smooth"});
     }
+  },
+  created() {
+    window.addEventListener('scroll', _.throttle(() => {
+      let currentScrollTop = document.documentElement.scrollTop;
+      const header = document.querySelector('.head');
+      if (lastScroll < currentScrollTop){
+        header.classList.add('hide');
+      }
+      else {
+        header.classList.remove('hide');
+      }
+      lastScroll = document.documentElement.scrollTop;
+    }),500)
   }
 }
 </script>
@@ -35,12 +50,18 @@ export default {
   justify-content: space-between;
   height: 50px;
   line-height: 50px;
+  transition-duration: .5s;
+  top:0;
+}
+.head.hide{
+  position: sticky;
 }
 .header-left{
   display: flex;
   width: 100px;
   font-size: 20px;
   margin-left: 10px;
+  background: #fff;
 }
 .header-left .btn-back {
   padding: 0 10px;
@@ -59,12 +80,15 @@ export default {
   overflow: hidden;
   text-align: center;
   z-index: -1;
+  background: #fff;
 }
 .header-right{
   text-align: end;
   margin-right: 20px;
   width: 100px;
   font-size: 20px;
+  background: #fff;
+  cursor: pointer
 }
 .btn-top{
   position: fixed;

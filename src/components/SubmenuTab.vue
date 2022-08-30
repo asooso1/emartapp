@@ -4,25 +4,19 @@
       ref="filterSwiper"
       :options="swiperOption"
     >
-      <swiper-slide>
-        <span @click="changeCategory('all')">전체</span>
+      <swiper-slide id="item-all" class="selected">
+        <span  @click="changeCategory('all')">전체</span>
       </swiper-slide>
       <swiper-slide
-        v-for="(category,idx) in categories"
-        :key="idx"
+      v-for="(category,idx) in categories"
+      :key="idx"
+      :id="`item-${idx}`" 
       >
-        <span @click="changeCategory(idx)">{{ category }}</span>
-      </swiper-slide>
-      <!-- <swiper-slide>든든하고 건강하게</swiper-slide>
-      <swiper-slide>여름과일</swiper-slide>
-      <swiper-slide>피코크</swiper-slide>
-      <swiper-slide>신선식품</swiper-slide>
-      <swiper-slide>신선식품</swiper-slide>
-      <swiper-slide>신선식품</swiper-slide>
-      <swiper-slide>신선식품</swiper-slide> -->
-    </swiper>
-
-  </div>
+      <span @click="changeCategory(idx)">{{ category }}</span>
+    </swiper-slide>
+  </swiper>
+  
+</div>
 </template>
 
 <script>
@@ -65,28 +59,36 @@ export default {
     }
   },
   methods: {
-    test(){
-      console.log('a')
-    },
+    // 카테고리 변경시 
     changeCategory(val) {
-      this.$emit('changeCategory', val)
-      // console.log(val)
+      // 기존 check표시 해제
+      const currentSelectedItem = document.querySelector(`#item-${this.selectedCategory}`);
+      currentSelectedItem.classList.remove('selected');
+      // 새로 check표시 ON
+      const newSelectedItem = document.querySelector(`#item-${val}`)
+      newSelectedItem.classList.add('selected')
+      this.$emit('changeCategory', val);
     }
-  }
+  },
 }
 </script>
 
 <style>
 .my-swiper {
-  position: sticky;
   background: #fff;
-  top:0;
+  top: 0px;
   width: 100%;
   margin-bottom: 20px;
   border-bottom: 1px solid rgba(161, 161, 161, 0.356);
+  position:sticky;
+  /* z-index: -1; */
+}
+.my-swiper.hide {
+  top: 50px;
 }
 .swiper-container {
   padding-left: 20px;
+  color: #888;
 }
 .swiper-container .swiper-wrapper .swiper-slide {
   width: auto; 
@@ -95,12 +97,24 @@ export default {
   font-size: 14px;
   line-height: 36px;
   text-align: center;
-  color: #888;
   cursor: pointer;
 }
 .swiper-slide.selected{
   font-weight:700; 
   color:#333; 
   border-bottom: 2px solid #333;
+}
+@keyframes test{
+  0% {
+    top: -50px;
+    opacity:0;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+    top: 50px;
+  }
 }
 </style>
