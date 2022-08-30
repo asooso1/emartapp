@@ -39,28 +39,14 @@ export default {
         effect: 'slide',
         slidesOffsetBefore: 0, // slidesOffsetBefore는 첫번째 슬라이드의 시작점에 대한 변경할 때 사용
         slidesOffsetAfter: 0, // slidesOffsetAfter는 마지막 슬라이드 시작점 + 마지막 슬라이드 너비에 해당하는 위치의 변경이 필요할 때 사용
-        // freeMode: true, // freeMode를 사용시 스크롤하는 느낌으로 구현 가능
-        // centerInsufficientSlides: true, // 컨텐츠의 수량에 따라 중앙정렬 여부를 결정함
-        // slideToClickedSlide : true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
-        allowTouchMove : true, // (false-스와이핑안됨)버튼으로만 슬라이드 조작이 가능
+        allowTouchMove : true, // 버튼으로만 슬라이드 조작이 가능
       }
     }
   },
-  setup(){
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    }
-    const onSlideChange = () => {
-      console.log('slide change');
-    }
-    return {
-      onSwiper,
-      onSlideChange,
-    }
-  },
-  methods: {
+  methods: {    
     // 카테고리 변경시 
     changeCategory(val) {
+      window.scrollTo({ top:0, behavior:"smooth"});
       // 기존 check표시 해제
       const currentSelectedItem = document.querySelector(`#item-${this.selectedCategory}`);
       currentSelectedItem.classList.remove('selected');
@@ -81,7 +67,6 @@ export default {
   margin-bottom: 20px;
   border-bottom: 1px solid rgba(161, 161, 161, 0.356);
   position:sticky;
-  /* z-index: -1; */
 }
 .my-swiper.hide {
   top: 50px;
@@ -98,23 +83,11 @@ export default {
   line-height: 36px;
   text-align: center;
   cursor: pointer;
+  z-index: 9999;
 }
 .swiper-slide.selected{
   font-weight:700; 
   color:#333; 
   border-bottom: 2px solid #333;
-}
-@keyframes test{
-  0% {
-    top: -50px;
-    opacity:0;
-  }
-  50% {
-    top: 0px;
-  }
-  100% {
-    opacity: 1;
-    top: 50px;
-  }
 }
 </style>

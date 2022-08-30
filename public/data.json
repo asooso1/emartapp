@@ -158,13 +158,17 @@
       "discount": {
         "value": "20",
         "condition": "신세계포인트 적립 시"
-      }
+      },
+      "likeCount": "412",
+      "commentCount": "321"
     },
     {
       "category": "추석 선물",
       "name": "참치 통조림 세트",
       "price": "53600",
-      "image": "./images/tuna.jpg"
+      "image": "./images/tuna.jpg",
+      "likeCount": "523",
+      "commentCount": "414"
     },
     {
       "category": "추석 선물",
@@ -174,7 +178,9 @@
       "discount": {
         "value": "20",
         "condition": "행사카드 결제 시"
-      }
+      },
+      "likeCount": "0",
+      "commentCount": "1023"
     },
     {
       "category": "추석 선물",
@@ -184,7 +190,9 @@
       "discount": {
         "value": "15",
         "condition": "신세계포인트 적립 시"
-      }
+      },
+      "likeCount": "51",
+      "commentCount": "0"
     },
     {
       "category": "추석 선물",
@@ -193,7 +201,9 @@
       "image": "./images/fruitset.png",
       "promotion": {
         "value": "당일 배송"
-      }
+      },
+      "likeCount": "32",
+      "commentCount": "544"
     },
     {
       "category": "추석 선물",
@@ -202,7 +212,9 @@
       "image": "./images/bokbunja.jpg",
       "promotion": {
         "value": "당일 배송"
-      }
+      },
+      "likeCount": "512",
+      "commentCount": "323"
     },
     {
       "category": "신선 식품",
@@ -215,7 +227,9 @@
       },
       "promotion": {
         "value": "당일 배송"
-      }
+      },
+      "likeCount": "53",
+      "commentCount": "0"
     },
     {
       "category": "신선 식품",
@@ -228,7 +242,9 @@
       },
       "promotion": {
         "value": "당일 배송"
-      }
+      },
+      "likeCount": "0",
+      "commentCount": "3"
     },
     {
       "category": "신선 식품",
@@ -241,7 +257,9 @@
       },
       "promotion": {
         "value": "당일 배송"
-      }
+      },
+      "likeCount": "23",
+      "commentCount": "44"
     },
     {
       "category": "신선 식품",
@@ -254,7 +272,375 @@
       },
       "promotion": {
         "value": "당일 배송"
-      }
+      },
+      "likeCount": "33",
+      "commentCount": "152"
+    },
+    {
+      "category": "전자제품",
+      "name": "노브랜드 노트북",
+      "price": "339000",
+      "image": "./images/notebook.jpg",
+      "discount": {
+        "value": "15",
+        "condition": "신세계포인트 적립 시"
+      },
+      "likeCount": "523",
+      "commentCount": "31"
+    },
+    {
+      "category": "전자제품",
+      "name": "노트북",
+      "price": "423000",
+      "image": "./images/notebook2.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "제휴 카드 사용 시"
+      },
+      "likeCount": "0",
+      "commentCount": "55"
+    },
+    {
+      "category": "전자제품",
+      "name": "아이패드 프로",
+      "price": "1390500",
+      "image": "./images/ipadpro.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "제휴 카드 사용 시"
+      },
+      "likeCount": "186",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "아이패드 9세대",
+      "price": "398000",
+      "image": "./images/ipad.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "제휴 카드 사용 시"
+      },
+      "likeCount": "66",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "아이패드 에어",
+      "price": "920000",
+      "image": "./images/ipadair.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "제휴 카드 사용 시"
+      },
+      "likeCount": "41",
+      "commentCount": "23"
+    },
+    {
+      "category": "전자제품",
+      "name": "게임용 모니터",
+      "price": "165000",
+      "image": "./images/monitor.png",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 상품권 사용 시"
+      },
+      "likeCount": "3",
+      "commentCount": "52"
+    },
+    {
+      "category": "전자제품",
+      "name": "HP 모니터",
+      "price": "233500",
+      "image": "./images/monitor2.png",
+      "discount": {
+        "value": "10",
+        "condition": "제휴 카드 사용 시"
+      },
+      "likeCount": "42",
+      "commentCount": "33"
+    },
+    {
+      "category": "전자제품",
+      "name": "완본체 컴퓨터",
+      "price": "999000",
+      "image": "./images/computer.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "제휴 카드 사용 시"
+      },
+      "likeCount": "72",
+      "commentCount": "34"
+    },
+    {
+      "category": "전자제품",
+      "name": "최신형 컴퓨터",
+      "price": "1550000",
+      "image": "./images/computer2.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "2",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "R7 컴퓨터 본체",
+      "price": "1979000",
+      "image": "./images/computer3.jpg",
+      "likeCount": "41",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "스피커",
+      "price": "33000",
+      "image": "./images/speaker.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "2",
+      "commentCount": "555"
+    },
+    {
+      "category": "전자제품",
+      "name": "PC용 스피커",
+      "price": "72000",
+      "image": "./images/speaker2.png",
+      "discount": {
+        "value": "15",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "0",
+      "commentCount": "72"
+    },
+    {
+      "category": "전자제품",
+      "name": "스피커",
+      "price": "55000",
+      "image": "./images/speaker3.jpg",
+      "discount": {
+        "value": "20",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "0",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "블루투스 스피커",
+      "price": "23000",
+      "image": "./images/speaker4.png",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "0",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "블루투스 스피커",
+      "price": "133000",
+      "image": "./images/speaker5.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "0",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "유선 키보드",
+      "price": "35000",
+      "image": "./images/keyboard.png",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "promotion": {
+        "value": "1+1"
+      },
+      "likeCount": "0",
+      "commentCount": "623"
+    },
+    {
+      "category": "전자제품",
+      "name": "무선 키보드",
+      "price": "80000",
+      "image": "./images/keyboard2.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      },
+      "likeCount": "0",
+      "commentCount": "0"
+    },
+    {
+      "category": "전자제품",
+      "name": "매직 키보드",
+      "price": "132000",
+      "image": "./images/keyboard3.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      },
+      "likeCount": "0",
+      "commentCount": "32"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "그릴 닭가슴살",
+      "price": "2300",
+      "image": "./images/chicken1.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "0",
+      "commentCount": "62"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "냉동 닭가슴살",
+      "price": "9600",
+      "image": "./images/chicken2.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "35",
+      "commentCount": "31"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "노브랜드 닭가슴살",
+      "price": "9900",
+      "image": "./images/chicken3.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "promotion": {
+        "value": "당일 배송"
+      },
+      "likeCount": "0",
+      "commentCount": "0"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "닭볶음탕용 닭",
+      "price": "6500",
+      "image": "./images/chicken4.jpg",
+      "promotion": {
+        "value": "당일 배송"
+      },
+      "likeCount": "0",
+      "commentCount": "32"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "돼지고기 모둠(1.5kg)",
+      "price": "16900",
+      "image": "./images/fork.jpg",
+      "discount": {
+        "value": "20",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "16",
+      "commentCount": "0"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "돼지 목심 바로구이(1kg)",
+      "price": "9900",
+      "image": "./images/fork2.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "616",
+      "commentCount": "277"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "꽃삼겹살",
+      "price": "8000",
+      "image": "./images/fork3.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "623",
+      "commentCount": "555"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "소고기 모둠",
+      "price": "36500",
+      "image": "./images/beef.jpg",
+      "discount": {
+        "value": "5",
+        "condition": "제휴카드 결제 시"
+      },
+      "likeCount": "956",
+      "commentCount": "513"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "척아이롤",
+      "price": "12200",
+      "image": "./images/beef2.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "제휴카드 결제 시"
+      },
+      "likeCount": "6234",
+      "commentCount": "8734"
+    },
+    {
+      "category": "든든하고 건강하게",
+      "name": "소고기등심",
+      "price": "33000",
+      "image": "./images/beef3.jpg",
+      "discount": {
+        "value": "20",
+        "condition": "제휴카드 결제 시"
+      },
+      "likeCount": "777",
+      "commentCount": "77"
+    },
+    {
+      "category": "튼튼하게 쑥쑥",
+      "name": "굿밀크 우유",
+      "price": "2500",
+      "image": "./images/milk.jpg",
+      "discount": {
+        "value": "10",
+        "condition": "신세계 포인트 적립 시"
+      },
+      "likeCount": "523",
+      "commentCount": "635"
+    },
+    {
+      "category": "튼튼하게 쑥쑥",
+      "name": "저지방 우유",
+      "price": "1300",
+      "image": "./images/milk2.jpg",
+      "promotion": {
+        "value": "당일 배송"
+      },
+      "likeCount": "523",
+      "commentCount": "635"
     }
   ]
 }
