@@ -20,7 +20,8 @@
 
 <script>
 import _ from 'lodash';
-let lastScroll = document.documentElement.scrollTop || 0
+let lastScroll = document.documentElement.scrollTop || 0;
+
 export default {
   methods: {
     toTop() {
@@ -100,7 +101,6 @@ export default {
   border: 1px solid #ddd;
   background: #fff;
   z-index: 9999;
-  /* box-shadow: 5px 5px 1px rgba(56, 56, 56, .2); */
   box-shadow: 4px 4px 4px rgb(50,50,50,.21)
 }
 </style>

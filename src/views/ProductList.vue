@@ -6,10 +6,9 @@
       @changeCategory="changeCategory"
     />
     <ProductItemVue 
-      v-for="(item, idx) in selectedList.slice(0, pageNumber*7)"
+      v-for="(item, idx) in selectedList.slice(0, pageNumber*20)"
       :key="idx"
       :product="item"
-      @addItem="test"
     />
     
   </div>
@@ -21,8 +20,9 @@ import ProductItemVue from '@/components/ProductItem.vue';
 import SubmenuTabVue from '@/components/SubmenuTab.vue';
 import _ from 'lodash';
 import axios from 'axios';
+// scroll Up/Down 확인을 위한 변수
 let lastScroll = document.documentElement.scrollTop || 0;
-// let scrollUpState = false;
+
 export default {
   name: 'ProductList',
   components: {
@@ -31,12 +31,16 @@ export default {
   },
   data() {
     return {
+      // 인피니티 스크롤 페이지네이션을 위한 변수
       pageNumber: 1,
+      // api 요청 후 받은 data
       allList: [],
+      // 선택된 카테고리 리스트 data
       selectedList: [],
+      // 전체 카테고리 data
       categories: [],
+      // 선택된 카테고리명
       selectedCategory: 'all',
-      test: false,
     }
   },
   methods: {
@@ -47,7 +51,6 @@ export default {
         url: './data.json'
       })
         .then(res => {
-          // console.log(res)
           this.allList = res.data.list
           this.getCategory(this.allList)
           this.parseData(this.allList)
@@ -108,14 +111,18 @@ export default {
     }
   },
   created(){
+    // 스크롤이벤트 추가
     window.addEventListener('scroll', _.throttle(() => {
+      // 현재 스크롤의 top을 저장
       let currentScrollTop = document.documentElement.scrollTop;
       const header = document.querySelector('.head');
       const swiper = document.querySelector('.my-swiper');
+      // 기존 스크롤보다 top이 높아지면 scroll down > 탭 보이기
       if (lastScroll < currentScrollTop){
         header.classList.remove('hide');
         swiper.classList.remove('hide');
       }
+      // 기존 스크롤보다 낮아지면 scroll up > 탭 숨김
       else {
         header.classList.add('hide');
         swiper.classList.add('hide');
@@ -128,11 +135,6 @@ export default {
     }),500)
     this.getAllList()
   },
-  mounted(){
-  },
-  // destroyed(){
-  //   window.removeEventListener('scroll', this.test())
-  // }
 }
 </script>
 

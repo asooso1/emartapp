@@ -30,8 +30,6 @@ export default {
   props: {
     product: Object,
   },
-  methods: {
-  },
 }
 </script>
 
@@ -48,39 +46,39 @@ img {
   margin-bottom: 20px;
   font-size: 14px;
 }
-.product-item .box_left{
+.box_left{
   width: 120px;
   height: 120px;
   border-radius: 15px;
   text-align: center;
 }
-.product-item .box_left img {
+.box_left img {
   width: 120px;
   height: 120px;
 }
-.product-item .box_right{
+.box_right{
   width: 100%;
   margin-left: 20px;
   text-align: start;
 }
-.product-item .box_right .price{
+.box_right .price{
   margin-bottom: 10px;
 }
-.product-item .box_right .price .origin-price{
+.box_right .price .origin-price{
   text-decoration: line-through;
   color: #777;
   margin-right: 5px;
 }
-.product-item .box_right .price .discounted-price{
+.box_right .price .discounted-price{
   color: #222;
   font-size: 18px;
   font-weight: 700;
 }
-.product-item .box_right .product-name{
+.box_right .product-name{
   margin-bottom: 10px;
   font-weight: 800;
 }
-.product-item .box_right .event {
+.box_right .event {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
@@ -88,7 +86,7 @@ img {
   font-weight: 600;
   max-width: 100%;
 }
-.product-item .box_right .event .promotion-red{
+.box_right .event .promotion-red{
   color: #DB392E;
   border: 1px solid #DB392E;
   border-radius: 5px;
@@ -99,7 +97,7 @@ img {
   overflow: hidden;
   margin-right: 5px;
 }
-.product-item .box_right .event .promotion-blue{
+.box_right .event .promotion-blue{
   color: #4774CF;
   border: 1px solid #4774CF;
   border-radius: 5px;
@@ -110,17 +108,11 @@ img {
   white-space: nowrap;
   overflow: hidden;
 }
-.product-item .box_right .reactions{
+.box_right .reactions{
   font-size: 14px;
   display: flex;
   gap: 30px;
   color: #777;
-}
-.product-item .box_right .reactions .like{
-  
-}
-.product-item .box_right .reactions .comment{
-  
 }
 /* PC */
 @media screen and (min-width: 1440px){
